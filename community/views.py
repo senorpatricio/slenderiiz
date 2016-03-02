@@ -9,6 +9,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import PostForm
 from .models import Post
 
+def home(request):
+    return render(request, 'home.html')
 
 def post_create(request):
     if not request.user.is_authenticated():

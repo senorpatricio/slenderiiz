@@ -7,9 +7,11 @@ from .views import (
     post_detail,
     post_list,
     post_update,
+    home,
 )
 
 urlpatterns = [
+    url(r'^$', home, name='home'),
     url(r'^create/$', post_create),
     url(r'^list/$', post_list, name="list"),
     url(r'^(?P<slug>[\w-]+)/$', post_detail, name='detail'), # detail view

@@ -35,9 +35,12 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'community',
+    'crispy_forms',
+    'registration',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -132,3 +135,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
+
+
+# registration redux stuff
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = 'list'
+
+
+# email settings
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -26,6 +26,7 @@ urlpatterns = [
     # url(r'^posts/$', "community.views.post_home"),
     # url(r'^posts/$', "<app_name>.views.<function_name>"),
 
+   url(r'^accounts/', include('registration.backends.default.urls')),
 ]
 
 if settings.DEBUG:
